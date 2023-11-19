@@ -100,5 +100,5 @@ example: http://34.45.162.23
 
 no need to add the exposed port 80 since it is a default port for your apache web server and this is the port for your local browser
 
-you can chang port in your dockerfile and docker-compose file for frontend to deploy on development environment.
+you can change port in your dockerfile and docker-compose file for frontend to deploy on development environment.
 you do not need to copy to apache server while in the dev environment.
