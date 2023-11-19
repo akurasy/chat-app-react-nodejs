@@ -48,7 +48,7 @@ vi public/src/utils/APIRoutes.js
 ```
 
 create Dockerfile for frontend. the frontend is named public in this application. change directory to public.
-put all environmental variables in the dockerfile inside. 
+put all environmental variables in the dockerfile. 
 to see environmental variables, check the .env file in each directories for frontend and backend to see their env.
 
 ```
