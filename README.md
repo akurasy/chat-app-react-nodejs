@@ -1,4 +1,11 @@
-# chat-app-react-nodejs
+# chat-app-react-
+
+Snappy is chat application build with the power of MERN Stack. You can find the tutorial [here](https://www.youtube.com/watch?v=otaQKODEUFs)
+
+
+![login page](./images/snappy_login.png)
+
+![home page](./images/snappy.png)
 
 This is a 3-tier chat application deployed on docker with docker networking best practices with a Dockerfile and deployed using a docker-compose manifest file. 
 
