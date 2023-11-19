@@ -36,7 +36,7 @@ git clone https://github.com/akurasy/chat-app-react-nodejs.git
 cd chat-app-react-nodejs
 ```
 
-edit the file in this directory and replace localhost with your public IP. leave as localhost if only you will be testing on the
+edit the API file in thE public/src/utils directory and replace localhost with your public IP. leave as localhost if only you will be testing on the
 local machine used to deploy. 
 
 ```
