@@ -93,7 +93,7 @@ docker images #to see built image
 docker ps #to see running containers
 
 ```
-you can view your application on ypur brower by using your public IP
+you can view your application on your brower by using your public IP
 
 # paste your public IP on your browser to see your deployed application
 example: http://34.45.162.23
