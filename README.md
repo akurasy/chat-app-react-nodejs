@@ -9,8 +9,9 @@ Snappy is chat application build with the power of MERN Stack. You can find the 
 
 
 
+```
 This is a 3-tier chat application deployed on docker with docker networking best practices considered while working
-with a docker and deployed using docker-compose.
+with Docker and deployed using docker-compose to  build multiple images and run multiple docker containers.
 
 The application is composed of a frontend built with reacts and backend with nodejs which writes into a mongo database.
 
