@@ -64,7 +64,7 @@ to see environmental variables, check the .env file in each directories for fron
 ```
 cd public
 vi Dockerfile
-#create your Dockerfile for frontend and copy into apache2 server and expose port 80 for apache2.
+#create your Dockerfile for frontend and copy into apache2 server and expose port 80 for apache2
 
 ```
 create Dockerfile for backend. the backend is named server in this application. change directory to server
