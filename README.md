@@ -72,7 +72,7 @@ create Dockerfile for backend. the backend is named server in this application. 
 ```
 cd server
 vi Dockerfile
-#create your Dockerfile for the frontend
+#create your Dockerfile for the backend
 
 ```
 
