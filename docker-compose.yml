@@ -12,6 +12,7 @@ services:
 
   public:
     build: ./public
+    image: akurasy/frontend
     container_name: public
     networks:
       - app-network
@@ -22,6 +23,7 @@ services:
 
   server:
     build: ./server
+    image: akurasy/backend
     container_name: server
     networks:
       - app-network
@@ -40,4 +42,3 @@ services:
       - "27017:27017"
     volumes:
       - app-volume:/data/db
-
