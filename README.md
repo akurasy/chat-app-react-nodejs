@@ -112,3 +112,11 @@ no need to add the exposed port 80 since it is a default port for your apache we
 
 you can change port in your dockerfile and docker-compose file for frontend to deploy on development environment.
 you do not need to copy to apache server while in the dev environment.
+
+
+# BUILDING AND DEPLOYING THIS APPLICATION USING A PIPELINE IN JENKINS AS CI/CD TOOLS
+
+To deploy this application, we are going to take security into consideration while pushing our image to dockerhub. a credential will be created to achieve this security best practise in securing our pipeline script. 
+
+create a Dockerfile and docker-compose.yml for your jenkins image and container. 
+refer to this link and git clone to your environment. [please click here for the jenkins build repo](https://github.com/akurasy/jenkins-build.git)
