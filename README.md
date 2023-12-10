@@ -119,4 +119,38 @@ you do not need to copy to apache server while in the dev environment.
 To deploy this application, we are going to take security into consideration while pushing our image to dockerhub. a credential will be created to achieve this security best practise in securing our pipeline script. 
 
 create a Dockerfile and docker-compose.yml for your jenkins image and container. 
-refer to this link and git clone to your environment. [please click here for the jenkins build repo](https://github.com/akurasy/jenkins-build.git)
+refer to this link and git clone to your environment. [please click here for the jenkins build repo](https://github.com/akurasy/jenkins-build.git) . run the below command to create your jenkins server
+
+```
+docker-compose up -d
+```
+
+# login to your jenkins server using publicIP:8080
+
+Create a jenkins pipeline job by use the url of this repo as your source code
+
+you only create github credentials if your oulling from a private repo. we will limit this practise to a public repo.
+
+build the application. 
+
+# after building the application, you will notice that the docker-compose push command will fail, this is because we have not created any docker repo with that image name. we are are going to do these two things on dockerhub
+
+  1. goto dockerhub, create a repo for the frontend and backend. mine was named frontend and backend respectively. please note this           image name must be the same on your docker-compose.yaml file. my images were name akurasy/frontend and akurasy/backend
+     so, the repo will appear in this format akurasy/frontend and akurasy/backend . akurasy is my dockerhub username.
+  2. create a credential to be used by jenkins to perform a read,write,execute command on your dockerhub.
+     goto account ------ security ----- add token and create a token. copy and save the token created
+
+
+# now on jenkins server, we want to create a credential for our docker token and use that credentials to login via jenkins
+
+goto jenkins dashboard-------- click on your username e.g admin ----- click on credentials ----- system ---- global credentials --- add credentials---- add dockerhub username and use the token generated as password and save. this will generate a credential. 
+
+# now we need to create a global properties (environmetal vriables whihc provides security to our created credentials)
+goto manage jenkins ---- system -- scroll to global properties ----- select environmantall vriables ---- enter variable details
+for the above in this practise our environmental variable for jenkins-docker integration has been defined inside our jenkinsfile in this repo, goto jenkinsfile on line 23 we have the variable written as   withCredentials([usernamePassword(credentialsId: "${DOCKER_REGISTRY_CREDS}". our vriable name is "DOCKER_REGISTRY_CREDS"
+use this name to configure your global properties and use the credentials ID created initially as the value. then save.
+
+build your application again and the image will be pushed to your dockerhub using the env variable created for docker.
+goto dockerhub and confirm that images were successfully pushed or check the console output for job details. 
+
+# PLEASE NOTE this job on this CI/CD can also be done using a github action. the practise for github action will be done in another session. 
