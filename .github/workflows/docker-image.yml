@@ -22,6 +22,6 @@ jobs:
           git pull origin main
 
     - name: Docker Compose Up
-      uses: docker/compose-cli@v1
-      with:
-        args: up -d
+      run: |
+        docker-compose up -d
+      working-directory: /home/chat-app-react-nodejs
