@@ -25,5 +25,5 @@ jobs:
 
     - name: Docker Compose Up
       run: |
-        echo running a docker-compose deployment
+        echo running a docker-compose deployment in $pwd
         docker-compose up -d
