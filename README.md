@@ -53,7 +53,7 @@ local machine used to deploy.
 vi public/src/utils/APIRoutes.js
 # change line 1: export const host = "localhost:5000";
 # replace localhost with public IP: export const host = "publicIP:5000";
-#save the file
+#save the file.
 
 ```
 
