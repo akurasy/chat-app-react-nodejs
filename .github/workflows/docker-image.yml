@@ -21,6 +21,7 @@ jobs:
           mkdir /home/ubuntu/chat-app-react-nodejs
           cd /home/ubuntu/chat-app-react-nodejs
           git init
+          git config --global init.defaultBranch main
           git pull origin main
 
     - name: Docker Compose Up
