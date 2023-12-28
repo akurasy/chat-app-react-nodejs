@@ -20,7 +20,7 @@ jobs:
         script: |
           cd /home/ubuntu/chat-app-react-nodejs
           git init
-          git remote add origin https://github.com/akurasy/chat-app-react-nodejs.git
+          #git remote add origin https://github.com/akurasy/chat-app-react-nodejs.git
           git pull origin main
           echo running a docker-compose command
           cd chat-app-react-nodejs.git
