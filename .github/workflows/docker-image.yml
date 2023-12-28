@@ -31,5 +31,5 @@ jobs:
 
     - name: Docker Compose Up
       run: |
+        cd chat-app-react-nodejs
         docker-compose up -d
-      working-directory: /home/runner/work/chat-app-react-nodejs/chat-app-react-nodejs
