@@ -22,10 +22,12 @@ jobs:
           git init
           git remote add origin https://github.com/akurasy/chat-app-react-nodejs.git
           git pull origin main
-
-    - name: Docker Compose Up
-      run: |
-        sudo su - ubuntu
-        echo running a docker-compose deployment
-        cd /home/ubuntu/chat-app-react-nodejs
-        docker-compose up -d
+          echo running a docker-compose command
+          cd chat-app-react-nodejs.git
+          docker-compose up -d
+    #- name: Docker Compose Up
+      #run: |
+        #sudo su - ubuntu
+        #echo running a docker-compose deployment
+        #cd /home/ubuntu/chat-app-react-nodejs
+        #docker-compose up -d
