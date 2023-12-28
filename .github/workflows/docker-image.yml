@@ -25,7 +25,7 @@ jobs:
 
     - name: Docker Compose Up
       run: |
-        pwd
-        echo running a docker-compose deployment in $pwd
+        sudo su - ubuntu
+        echo running a docker-compose deployment
         cd /home/ubuntu/chat-app-react-nodejs
         docker-compose up -d
