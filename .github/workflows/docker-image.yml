@@ -23,13 +23,7 @@ jobs:
           git remote add origin https://github.com/akurasy/chat-app-react-nodejs.git
           git pull origin main
 
-
-    - name: Debugging
-      run: |
-        pwd
-        ls -la
-
     - name: Docker Compose Up
       run: |
-        cd chat-app-react-nodejs
+        echo running a docker-compose deployment
         docker-compose up -d
