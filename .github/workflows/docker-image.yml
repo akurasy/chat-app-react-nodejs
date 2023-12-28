@@ -18,7 +18,9 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.SERVER_SSH_PORT }}
         script: |
+          mkdir /home/ubuntu/chat-app-react-nodejs
           cd /home/ubuntu/chat-app-react-nodejs
+          git init
           git pull origin main
 
     - name: Docker Compose Up
