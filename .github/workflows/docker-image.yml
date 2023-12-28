@@ -20,7 +20,7 @@ jobs:
         script: |
           cd /home/ubuntu/chat-app-react-nodejs
           git init
-          git config --global init.defaultBranch main
+          git remote add origin https://github.com/akurasy/chat-app-react-nodejs.git
           git pull origin main
 
     - name: Docker Compose Up
