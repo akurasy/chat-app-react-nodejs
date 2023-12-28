@@ -24,7 +24,7 @@ jobs:
           #git pull origin main
           echo running a docker-compose command
           cd /home/ubuntu/chat-app-react-nodejs
-          #docker-compose up -d
+          docker-compose up -d
     #- name: Docker Compose Up
       #run: |
         #sudo su - ubuntu
